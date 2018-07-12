@@ -1,0 +1,16 @@
+[Unit]
+#BindsTo=dev-ttyUSB0.device
+After=dev-ttyUSB0.device
+Description=Wvdial connection
+Before=network.target
+Wants=network.target
+StartLimitIntervalSec=0
+
+[Service]
+type=simple
+ExecStart=/usr/bin/wvdial
+Restart=always
+RestartSec=60
+
+[Install]
+WantedBy=multi-user.target
