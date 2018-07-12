@@ -1,3 +1,7 @@
+To install:
+wvdial
+usb-modeswitch
+
 sudo echo 1 > /proc/sys/net/ipv4/ip_forward
 
 append net.ipv4.ip_forward=1 to file /etc/sysctl.conf
